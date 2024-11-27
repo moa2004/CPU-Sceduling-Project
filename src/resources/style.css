@@ -1,0 +1,57 @@
+.root-pane {
+    -fx-background-image: url("/images/new_cover.png");
+    -fx-background-size: cover;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+.button {
+    -fx-background-color: linear-gradient(#0066cc, #004d99);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#004d99, #003366);
+}
+
+.text-field {
+    -fx-border-color: #0066cc;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: #f8f8f8;
+}
+
+.table-view {
+    -fx-padding: 10px;
+    -fx-background-color: #f0f0f0;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 5, 0, 0, 1);
+}
+
+.vbox {
+    -fx-spacing: 15;
+    -fx-padding: 15;
+}
+
+.hbox {
+    -fx-spacing: 10;
+    -fx-padding: 10;
+}
+
+.label {
+    -fx-font-size: 14pt;
+    -fx-font-weight: bold;
+}
+
+.text-area {
+    -fx-border-color: #0066cc;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-background-color: #f8f8f8;
+}
