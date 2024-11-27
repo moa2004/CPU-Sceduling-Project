@@ -2,8 +2,8 @@ package gui;
 
 import algorithms.FCFS;
 import algorithms.SJF;
-import algorithms.PriorityScheduling;  // تم التعديل هنا
-import algorithms.RoundRobin;          // تم التعديل هنا
+import algorithms.PriorityScheduling; 
+import algorithms.RoundRobin;        
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
