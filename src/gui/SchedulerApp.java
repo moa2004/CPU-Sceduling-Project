@@ -1,26 +1,27 @@
 package gui;
-
 import algorithms.FCFS;
 import algorithms.SJF;
-import algorithms.PriorityScheduling; 
-import algorithms.RoundRobin;        
+import algorithms.PriorityScheduling;
+import algorithms.RoundRobin;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import models.Process;
-
+import java.awt.*;
 import java.util.List;
-
 public class SchedulerApp extends Application {
     private ObservableList<Process> processes = FXCollections.observableArrayList();
     private TextArea resultArea = new TextArea();
-
     @Override
     public void start(Stage primaryStage) {
         primaryStage.setTitle("CPU Scheduling Algorithms");
@@ -35,10 +36,8 @@ public class SchedulerApp extends Application {
         priorityInput.setPromptText("Priority");
         TextField arrivalTimeInput = new TextField();
         arrivalTimeInput.setPromptText("Arrival Time");
-
         TextField timeQuantumInput = new TextField();
         timeQuantumInput.setPromptText("Time Quantum (RR)");
-
         Button addButton = new Button("Add Process");
         addButton.setOnAction(e -> {
             try {
@@ -81,13 +80,12 @@ public class SchedulerApp extends Application {
                 showAlert("Input Error", "Please enter a valid Time Quantum value.");
             }
         });
-
         Button runPriorityButton = new Button("Run Priority");
         runPriorityButton.setOnAction(e -> {
-            PriorityScheduling.calculate(processes);
+            PriorityScheduling.
+                    calculate(processes);
             displayResults("Priority Scheduling", processes);
         });
-
         Button clearButton = new Button("Clear Table");
         clearButton.setOnAction(e -> {
             processes.clear();
@@ -95,11 +93,11 @@ public class SchedulerApp extends Application {
         });
         Button teamInfoButton = new Button("Team Info");
         teamInfoButton.setOnAction(e -> {
-            String teamInfo = "no wife no life team!\n" +
-                    "moamen mohammed mostafa\n" +
-                    "ali mohamed el khashab\n" +
-                    "mahmoud yasser salah\n" +
-                    "mohamed osama";
+            String teamInfo = "A'MMM Gonna Kill my self 😔!\n" +
+                    "Moamen Mohammed Mostafa 😍\n" +
+                    "Ali Mohamed El Khashab 😘\n" +
+                    "Mahmoud Yasser Salah ❤\n" +
+                    "Mohamed Osama 💕";
             showAlert("Team Info", teamInfo);
         });
         HBox buttonSection = new HBox(addButton, runFCFSButton, runSJFButton, runRRButton, runPriorityButton, clearButton, teamInfoButton);
@@ -142,8 +140,7 @@ public class SchedulerApp extends Application {
         root.setTop(inputSection);
         root.setCenter(processTable);
         root.setBottom(resultSection);
-
-        Scene scene = new Scene(root, 1000, 800);
+        Scene scene = new Scene(root, 1000, 800 );
         try {
             scene.getStylesheets().add(getClass().getResource("/resources/style.css").toExternalForm());
         } catch (NullPointerException e) {
@@ -178,3 +175,4 @@ public class SchedulerApp extends Application {
         launch(args);
     }
 }
+
